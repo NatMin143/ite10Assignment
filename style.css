@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --hover-color: rgb(202, 202, 202);
+}
+
+.container-1 {
+    position: relative;
+}
+
+/*=== Navigation ===*/
+
+.nav-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    z-index: 2;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: 80px;
+}
+
+
+.nav-list span {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    color: rgb(41, 41, 41);
+}
+
+.nav-list span:hover {
+    color: white;
+}
+
+
+
+/*=== Swiper Slides ===*/
+
+#swiper-1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.tr-des-img img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+}
+
+.tr-des-img {
+    position: relative;
+}
+
+.tr-des-name {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: auto;
+    bottom: 20%;
+    right: 10%;
+    z-index: 2;
+}
+
+.tr-des-name h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#swiper-1 .swiper-pagination {
+    bottom: 2rem;
+}
+
+#swiper-1 .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    opacity: 0.8;
+    background-color: white;
+}
+
+#swiper-1 .swiper-pagination-bullet-active {
+    background-color: black;
+    transition: 0.4s ease-in-out;
+}
+
+#swiper-1 .swiper-button-prev,
+#swiper-1 .swiper-button-next {
+    width: 70px;
+    color: white;
+    font-size: 2rem;
+    height: 70px;
+    border-radius: 50%;
+    transition: 0..3s ease-in-out;
+}
+
+#swiper-1 .swiper-button-prev:hover,
+#swiper-1 .swiper-button-next:hover {
+    background-color: rgb(206, 206, 206);
+    color: black;
+}
+
+/*===  Section 2 ===*/
+
+.container-2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container-2::before {
+    content: "";
+    background-image: url('./assets/travel-pic.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+}
+
+.container2-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.travel-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: fit-content;
+    padding: 3% 30px 20px 60px;
+}
+
+.travel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.travel {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+
+}
+
+.travel h1 {
+    font-size: 5rem;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.travel-info {
+    font-size: 1rem;
+    font-weight: 300;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.info1 {
+    font-size: 0.85rem;
+}
+
+/*=== menu swiper ===*/
+.travel-menu {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+#tr-menu-swiper {
+    width: 400px;
+    height: fit-content;
+    box-shadow: 1px 1px 2px 2px rgb(139, 139, 139);
+}
+
+
+#tr-menu-swiper .swiper-slide button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    transition: 0.2s ease-in-out;
+}
+
+#tr-menu-swiper .swiper-slide button:hover {
+    background-color: var(--hover-color);
+}
+
+.swiper-button-next {
+    right: 0px;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+#tr-menu-swiper .swiper-button-next::after,
+#tr-menu-swiper .swiper-button-prev::after {
+    content: "";
+}
+
+
+
+.active::after {
+    content: "";
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: red !important;
+    width: 100%;
+    transition: 0.5s;
+}
+
+/*=== Place informations ===*/
+.t {
+    display: none;
+    font-size: 0.85rem;
+    transition: 0.2s ease-in-out;
+}
+
+
+/*=== Tourist Spots Swiper ===*/
+.tr-spots-swiper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tr-spots-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-3{
+    width: 90%;
+    height: 95%;
+}
+
+.swiper-3 .swiper-slide{
+    width: 50%;
+    height: 100%;
+}
+
+.tr-spots{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tr-spots img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.tr-spots .tr-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 3px;
+    background-color: black;
+}
+
+.tr-spots p{
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.tr1{
+    display: block;
+}
+
+.tr2, .tr3, .tr4, .tr5, .tr6, .tr7, .tr8, .tr9{
+    display: none;
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=== Media Queries ===*/
+@media screen and (max-width:1200px) {
+    .travel-head {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-info {
+        align-items: flex-start;
+    }
+
+    .travel-menu {
+        padding-top: 10px;
+        height: fit-content;
+    }
+
+    .travel {
+        justify-content: center;
+    }
+
+    .travel h1 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-wrapper {
+        left: 1%;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .travel {
+        margin: 0;
+    }
+
+    .travel h1 {
+        font-size: 4rem;
+    }
+
+    .travel-info {
+        height: 80px;
+    }
+
+    .travel-menu {
+        padding-top: 0px;
+        height: fit-content;
+    }
+
+    #tr-menu-swiper .swiper-button-prev,
+    #tr-menu-swiper .swiper-button-next {
+        display: block;
+        top: 7px;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .tr-des-name h2 {
+        font-size: 1.8rem;
+    }
+
+    .travel-wrapper {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .travel {
+        display: flex;
+        justify-content: center;
+    }
+
+    .travel h1 {
+        font-size: 4rem;
+        width: fit-content;
+        font-size: 3rem;
+    }
+
+    .travel-menu {
+        padding-top: 10px;
+    }
+
+    .travel-info p {
+        text-align: center;
+    }
+
+    .travel-head {
+        padding: 10px;
+    }
+
+    .travel-info {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:420px) {
+
+    .travel h1 {
+        left: 10%;
+        font-size: 2rem;
+    }
+
+    .travel-info {
+        width: 98%;
+    }
+
+    .travel-info p {
+        font-size: 0.6rem;
+
+    }
+
+    #tr-menu-swiper {
+        width: 200px;
+        height: 30px;
+    }
+
+    .travel-menu {
+        height: auto;
+    }
+
+    #tr-menu-swiper .swiper-button-prev,
+    #tr-menu-swiper .swiper-button-next {
+        display: block;
+        top: 2px;
+    }
+}
